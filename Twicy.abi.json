@@ -1,0 +1,133 @@
+{
+	"ABI version": 2,
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"storageCode","type":"cell"},
+				{"name":"storageLength","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getStorageLength",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"storageLength","type":"uint32"}
+			]
+		},
+		{
+			"name": "getStorageIdForPayout",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"storageIdForPayout","type":"uint32"}
+			]
+		},
+		{
+			"name": "getDepositsCount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"depositsCount","type":"uint64"}
+			]
+		},
+		{
+			"name": "getTotal",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"total","type":"uint256"}
+			]
+		},
+		{
+			"name": "getDepositsLimit",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"depositLimit","type":"uint64"}
+			]
+		},
+		{
+			"name": "getStorages",
+			"inputs": [
+				{"name":"offset","type":"uint32"},
+				{"name":"limit","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"addresses","type":"address[]"},
+				{"name":"amounts","type":"uint128[]"},
+				{"name":"totalLength","type":"uint256"}
+			]
+		},
+		{
+			"name": "deployStorage",
+			"inputs": [
+				{"name":"count","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"addresses","type":"address[]"}
+			]
+		},
+		{
+			"name": "sendTransaction",
+			"inputs": [
+				{"name":"destination","type":"address"},
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "storageSendTransaction",
+			"inputs": [
+				{"name":"storageAddress","type":"address"},
+				{"name":"destination","type":"address"},
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "depositWithReferralId",
+			"inputs": [
+				{"name":"referralId","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deposit",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onReceiveReferrerAddress",
+			"inputs": [
+				{"name":"sender","type":"address"},
+				{"name":"referrer","type":"address"},
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onReceiveDepositsForPayout",
+			"inputs": [
+				{"name":"owners","type":"address[]"},
+				{"name":"rewards","type":"uint128[]"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}

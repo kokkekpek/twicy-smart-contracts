@@ -1,0 +1,98 @@
+{
+	"ABI version": 2,
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"rootAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getRootAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"rootAddress","type":"address"}
+			]
+		},
+		{
+			"name": "getDepositsCount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"depositsCount","type":"uint256"}
+			]
+		},
+		{
+			"name": "getAmountAvailableForPayout",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"amountAvailableForPayout","type":"uint128"}
+			]
+		},
+		{
+			"name": "getPayoutsCount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"payoutsCount","type":"uint32"}
+			]
+		},
+		{
+			"name": "getDeposits",
+			"inputs": [
+				{"name":"offset","type":"uint64"},
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"owners","type":"address[]"},
+				{"name":"rewards","type":"uint128[]"},
+				{"name":"totalLength","type":"uint256"}
+			]
+		},
+		{
+			"name": "dispatchReferrerAddress",
+			"inputs": [
+				{"name":"sender","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "save",
+			"inputs": [
+				{"name":"sender","type":"address"},
+				{"name":"reward","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "dispatchDepositsForPayout",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendTransaction",
+			"inputs": [
+				{"name":"destination","type":"address"},
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
