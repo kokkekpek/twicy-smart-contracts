@@ -1,3 +1,4 @@
 *.keys.json
 *.code
+*.conf.json
 code.txt
