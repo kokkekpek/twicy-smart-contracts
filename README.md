@@ -91,7 +91,7 @@ Twicy.depositWithReferralId()
 ```sh
 solc TwicyStorage.sol
 tvm_linker compile TwicyStorage.code --lib /path/to/TON-Solidity-Compiler/lib/stdlib_sol.tvm
-rm TwicyStorage.tvc
+rm TwicyStorage.tvc -f
 rename "s/[0123456789abcdef]{64}\.tvc/TwicyStorage\.tvc/" *.tvc
 tvm_linker decode --tvc TwicyStorage.tvc > code.txt
 ```
@@ -105,7 +105,7 @@ te6ccgECKgEAB1MAAib/APSk ... yPOAB8AH4R26S8jze
 ```sh
 solc Twicy.sol
 tvm_linker compile Twicy.code --lib /path/to/TON-Solidity-Compiler/lib/stdlib_sol.tvm
-rm Twicy.tvc
+rm Twicy.tvc -f
 rename "s/[0123456789abcdef]{64}\.tvc/Twicy\.tvc/" *.tvc
 tonos-cli genaddr Twicy.tvc Twicy.abi.json --genkey Twicy.keys.json
 ```
