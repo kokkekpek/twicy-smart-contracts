@@ -130,7 +130,7 @@ contract TwicyStorage is ArrayUtil,
         _payoutsCount = payoutsCount;
     }
 
-    function sendTransaction(address destination, uint128 value) external onlyRoot accept validTransferValue(value) {
+    function sendTransaction(address destination, uint128 value) external view onlyRoot accept validTransferValue(value) {
         destination.transfer(value);
     }
 
@@ -139,7 +139,7 @@ contract TwicyStorage is ArrayUtil,
     /***********
      * PRIVATE *
      ***********/
-    function _getTransferValue() private returns (uint128) {
+    function _getTransferValue() private pure returns (uint128) {
         uint128 balance = address(this).balance;
         return balance > (MINIMUM_BALANCE + MINIMUM_TRANSFER_VALUE) ?
             balance - MINIMUM_BALANCE :

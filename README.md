@@ -96,7 +96,7 @@ tvm_linker decode --tvc TwicyStorage.tvc > code.txt
 
 #### 2. Copy code from code.txt
 ```text
-te6ccgECKgEAB1MAAib/APSk ... yPOAB8AH4R26S8jze
+te6ccgECKwEAB2AAAib/APSk ... B8AH4R26TMPI83g==
 ```
 
 #### 3. Compile Twicy
@@ -108,21 +108,30 @@ tonos-cli genaddr Twicy.tvc Twicy.abi.json --genkey Twicy.keys.json
 
 #### 4. Send minimum 3💎 on generated address and deploy
 ```sh
-tonos-cli deploy Twicy.tvc '{"storageCode": "te6ccgECKgEAB1MAAib/APSk ... yPOAB8AH4R26S8jze","storageLength": 20000}' --abi Twicy.abi.json --sign Twicy.keys.json
+tonos-cli deploy Twicy.tvc '{"storageCode": "te6ccgECKwEAB2AAAib/APSk ... B8AH4R26TMPI83g==","storageLength": 20000}' --abi Twicy.abi.json --sign Twicy.keys.json
 ```
 
 ### Deployment tools
+Solc from [TON Solidity Compiler](https://github.com/tonlabs/TON-Solidity-Compiler)
 ```
 solc, the solidity compiler commandline interface
-Version: 0.6.3-develop.2020.11.19+commit.35637a12.mod.Linux.g++
+Version: 0.6.3-develop.2020.12.13+commit.54c8a5a1.mod.Linux.g++
 ```
 
+[TVM-linker](https://github.com/tonlabs/TVM-linker)
 ```
 TVM linker 0.1.0
-COMMIT_ID: 74f4230df9ae2fd8d91eba46acaa1a8c8330b8fa
+COMMIT_ID: 2e15070e458637add2ecb279a03bd88d8df37bde
+BUILD_DATE: 2020-12-13 03:25:46 +0300
+COMMIT_DATE: 2020-11-20 10:57:07 +0300
+GIT_BRANCH: master
 ```
 
+[tonos-cli](https://github.com/tonlabs/tonos-cli)
 ```
-tonos_cli 0.1.27
-COMMIT_ID: 6d7e16745d14af1cda720bc7afbc172f0aa64c05
+tonos_cli 0.1.28
+COMMIT_ID: a389881108384118ba1a565a0450762fdabeb705
+BUILD_DATE: 2020-12-13 03:41:14 +0300
+COMMIT_DATE: 2020-11-30 17:42:19 +0300
+GIT_BRANCH: master
 ```

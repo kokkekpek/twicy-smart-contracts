@@ -176,7 +176,7 @@ contract Twicy is TwicyInterface,
     function sendTransaction(
         address destination,
         uint128 value
-    ) public onlyOwner accept validTransferValue(value) {
+    ) public view onlyOwner accept validTransferValue(value) {
         destination.transfer(value);
     }
 
@@ -184,7 +184,7 @@ contract Twicy is TwicyInterface,
         address storageAddress,
         address destination,
         uint128 value
-    ) public onlyOwner accept validStorage(storageAddress) {
+    ) public view onlyOwner accept validStorage(storageAddress) {
         TwicyStorage(storageAddress).sendTransaction(destination, value);
     }
 
@@ -259,7 +259,7 @@ contract Twicy is TwicyInterface,
             _receiveDeposit(sender, value);
     }
 
-    function _receiveBank(address sender) private {
+    function _receiveBank(address sender) private view {
         sender.transfer({value: CONFIRMATION_VALUE, body: _getTransferBody(TEXT_OK)});
     }
 
@@ -306,7 +306,7 @@ contract Twicy is TwicyInterface,
         _dispatchDepositsForPayout(payoutValue);
     }
 
-    function _depositConfirmation(address sender) private {
+    function _depositConfirmation(address sender) private view {
         uint8[] message = _getMessageWithHexadecimalNumber(_depositsCount);
         sender.transfer({value: CONFIRMATION_VALUE, body: _getTransferBody(message)});
     }
