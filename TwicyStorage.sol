@@ -66,9 +66,9 @@ contract TwicyStorage is ArrayUtil,
 
 
 
-    /*********
-     * VIEWS *
-     *********/
+    /***********
+     * GETTERS *
+     ***********/
     function getRootAddress() public view returns (address rootAddress) { return _rootAddress; }
     function getDepositsCount() public view returns (uint256 depositsCount) { return _deposits.length; }
     function getAmountAvailableForPayout() public view returns (uint128 amountAvailableForPayout) { return _amountAvailableForPayout; }

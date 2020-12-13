@@ -117,9 +117,9 @@ contract Twicy is TwicyInterface,
 
 
 
-    /*********
-     * VIEWS *
-     *********/
+    /***********
+     * GETTERS *
+     ***********/
     function getStorageLength() public view returns (uint32 storageLength) { return _storageLength; }
     function getStorageIdForPayout() public view returns (uint32 storageIdForPayout) { return _storageIdForPayout; }
     function getDepositsCount() public view returns (uint64 depositsCount) { return _depositsCount; }
