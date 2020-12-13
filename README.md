@@ -93,7 +93,7 @@ solc TwicyStorage.sol
 tvm_linker compile TwicyStorage.code --lib /path/to/TON-Solidity-Compiler/lib/stdlib_sol.tvm
 rm TwicyStorage.tvc
 rename "s/[0123456789abcdef]{64}\.tvc/TwicyStorage\.tvc/" *.tvc
-tvm_linker decode --tvc a23244fa15bc2aa1cdaf97a9dd824c421aac4e1e5ab48367d3572a1c3bec4d4d.tvc > code.txt
+tvm_linker decode --tvc TwicyStorage.tvc > code.txt
 ```
 
 #### 2. Copy code from code.txt
