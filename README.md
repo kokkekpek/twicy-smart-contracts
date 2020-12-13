@@ -22,8 +22,8 @@ Own referral ID do not give you bonus multiplier
 ![How to play referral](_README/how-to-play-referral.png)
  * Send 10💎 to smart-contract
  * Receive referral ID in answer
- * Invite other users to the game. Ask them to make a deposit and input the deposit ID in the comment to the transfer
- * You will get 0.5💎 from every 10💎 your referrals deposits
+ * Invite other users to the game. Ask them to make a deposit and input the referral ID in the comment to the transfer
+ * You will get 0.5💎 from every 10💎 deposits of your referrals
 
 ## Economics
 ![Diagramm](_README/diagramm.png)
