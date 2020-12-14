@@ -1,4 +1,4 @@
-# Twisy
+# Twiсy
 ![logo](_README/logo.png)
 First risk-game on Free TON
 
