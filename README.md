@@ -13,15 +13,15 @@
 
 ## How to play
 ![How to play x2](_README/how-to-play-x2.png)
-* Send 10💎 to smart-contract.
-  * If you use [Surf](https://ton.surf/) on mobile use this link [ton://transfer/0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222?amount=10000000000](ton://transfer/0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222?amount=10000000000). If link not clickable then sorry. Github parser has not yet learned how to make links for the Free TON.
+* Send 10💎 to smart-contract
+  * If you use [Surf](https://ton.surf/) on mobile use this link [ton://transfer/0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222?amount=10000000000](ton://transfer/0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222?amount=10000000000). If link not clickable then sorry. Github parser has not yet learned how to make links for the Free TON
   * Minimum is 5💎. Maximum is 500💎
 * Get an answer and wait your turn
 * Get 20💎
 
 ## How to get x2.2
 ![How to play x2.2](_README/how-to-play-x2.2.png)
-* Send 10💎 to smart-contract.
+* Send 10💎 to smart-contract
   * Get a referral ID from another player
   * Write referral ID in the comment field
 * Get an answer and wait your turn
@@ -36,7 +36,7 @@ Own referral ID do not give you bonus multiplier
  * Invite other users to the game. Ask them to make a deposit and input the referral ID in the comment to the transfer
  * You will get 0.5💎 from every 10💎 deposits of your referrals
  
-You can use this links to invite users pay via mobile surf. Replace **0x0** at the end of the link to your referral ID.
+You can use this links to invite users pay via mobile surf. Replace **0x0** at the end of the link to your referral ID
 ton://transfer/0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222?amount=10000000000&text=**0x0**
 
 ## Economics
@@ -47,7 +47,7 @@ ton://transfer/0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d02222
  
 ## How it works
 ![Rules](_README/rules.png)
-Participants receive payments in turn.
+Participants receive payments in turn
  
  
 ## Security
