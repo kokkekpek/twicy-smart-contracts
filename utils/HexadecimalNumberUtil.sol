@@ -137,7 +137,7 @@ contract HexadecimalNumberUtil {
 
         uint8[] characters;
         for (uint8 i = 0; i < MAX_MESSAGE_LENGTH; i++) {
-            uint8 characterCode = uint8(number % 0xF);
+            uint8 characterCode = uint8(number % 0x10);
 
             if (characterCode == 0x0) characters.push(UTF8_0);
             if (characterCode == 0x1) characters.push(UTF8_1);
