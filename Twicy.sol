@@ -23,11 +23,10 @@ import 'utils/TwicyRewardUtil.sol';
  * Error codes
  *     • 100 — Method only for the owner
  *     • 101 — Method only for storage
- *     • 102 — A deposit is less than the minimum value
- *     • 103 — A deposit is more than the maximum value
- *     • 104 — More storages are required
- *     • 105 — Invalid referral id
- *     • 106 — Invalid storage address
+ *     • 102 — Invalid deposit value
+ *     • 103 — More storages are required
+ *     • 104 — Invalid referral id
+ *     • 105 — Invalid storage address
  *     • 200 — Invalid transfer value
  *     • 300 — Method can only be called before migration
  *     • 301 — Method can only be called after migration
@@ -48,8 +47,7 @@ contract Twicy is TwicyInterface,
     uint128 private constant STORAGE_DEPLOY_VALUE      = 1e9;     // 1💎
     uint128 private constant STORAGE_TRANSFER_VALUE    = 0.2e9;   // 0.2💎
     uint128 private constant CONFIRMATION_VALUE        = 0.001e9; // 0.001💎
-    uint128 private constant MIN_DEPOSIT               = 5e9;     // 5💎
-    uint128 private constant MAX_DEPOSIT               = 50e9;    // 50💎
+    uint128 private constant DEPOSIT                   = 10e9;    // 10💎
 
 
 
@@ -87,23 +85,22 @@ contract Twicy is TwicyInterface,
     }
 
     modifier validDeposit() {
-        require(msg.value >= MIN_DEPOSIT, 102, "A deposit is less than the minimum value");
-        require(msg.value <= MAX_DEPOSIT, 103, "A deposit is more than the maximum value");
+        require(msg.value == DEPOSIT, 102, "Invalid deposit value");
         _;
     }
 
     modifier enoughStorages() {
-        require(getDepositsLimit() >= _depositsCount, 104, "More storages are required");
+        require(getDepositsLimit() >= _depositsCount, 103, "More storages are required");
         _;
     }
 
     modifier validReferralId(uint64 referrerId) {
-        require(referrerId < _depositsCount, 105, "Invalid referral id");
+        require(referrerId < _depositsCount, 104, "Invalid referral id");
         _;
     }
 
     modifier validStorage(address storageAddress) {
-        require(_storages.exists(storageAddress), 106, "Invalid storage address");
+        require(_storages.exists(storageAddress), 105, "Invalid storage address");
         _;
     }
 
