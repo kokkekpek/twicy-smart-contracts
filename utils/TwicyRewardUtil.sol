@@ -5,9 +5,9 @@ contract TwicyRewardUtil {
      * CONSTANTS *
      *************/
     uint16 private constant REGULAR_REWARD_MULTIPLY  = 2e3;    // ×2
-    uint16 private constant BONUS_REWARD_MULTIPLY    = 2.2e3;  // ×2.2
-    uint16 private constant REGULAR_USERS_PART       = 0.90e3; // 90%
-    uint16 private constant BONUS_USERS_PART         = 0.85e3; // 85%
+    uint16 private constant BONUS_REWARD_MULTIPLY    = 2.1e3;  // ×2.1
+    uint16 private constant REGULAR_USERS_PART       = 0.95e3; // 95%
+    uint16 private constant BONUS_USERS_PART         = 0.90e3; // 90%
     uint16 private constant REFERRER_PART            = 0.05e3; // 5%
     uint16 private constant MULTIPLY_DIVIDER         = 1e3;
 
