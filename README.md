@@ -149,3 +149,6 @@ BUILD_DATE: 2020-12-13 03:41:14 +0300
 COMMIT_DATE: 2020-11-30 17:42:19 +0300
 GIT_BRANCH: master
 ```
+
+### Migration
+[Migration from v1.0.0 to 1.1.0](MIGRATION.md)
