@@ -110,7 +110,7 @@ tvm_linker decode --tvc TwicyStorage.tvc > code.txt
 
 #### 2. Copy code from code.txt
 ```text
-te6ccgECKwEAB2AAAib/APSk ... B8AH4R26TMPI83g==
+te6ccgECMQEACEYAAib/APSk ... 84AHwAfhHbpMw8jze
 ```
 
 #### 3. Compile Twicy
@@ -122,7 +122,7 @@ tonos-cli genaddr Twicy.tvc Twicy.abi.json --genkey Twicy.keys.json
 
 #### 4. Send minimum 3💎 on generated address and deploy
 ```sh
-tonos-cli deploy Twicy.tvc '{"storageCode": "te6ccgECKwEAB2AAAib/APSk ... B8AH4R26TMPI83g==","storageLength": 20000}' --abi Twicy.abi.json --sign Twicy.keys.json
+tonos-cli deploy Twicy.tvc '{"storageCode": "te6ccgECMQEACEYAAib/APSk ... 84AHwAfhHbpMw8jze","storageLength": 20000}' --abi Twicy.abi.json --sign Twicy.keys.json
 ```
 
 ### Deployment tools
