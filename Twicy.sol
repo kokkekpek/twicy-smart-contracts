@@ -45,7 +45,7 @@ contract Twicy is TwicyInterface,
     uint128 private constant STORAGE_TRANSFER_VALUE    = 0.2e9;   // 0.2💎
     uint128 private constant CONFIRMATION_VALUE        = 0.001e9; // 0.001💎
     uint128 private constant MIN_DEPOSIT               = 5e9;     // 5💎
-    uint128 private constant MAX_DEPOSIT               = 500e9;   // 500💎
+    uint128 private constant MAX_DEPOSIT               = 50e9;    // 50💎
 
 
 
