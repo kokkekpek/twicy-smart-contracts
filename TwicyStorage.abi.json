@@ -55,6 +55,24 @@
 			]
 		},
 		{
+			"name": "migrate",
+			"inputs": [
+				{"name":"amountAvailableForPayout","type":"uint128"},
+				{"name":"payoutsCount","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "migrateDeposits",
+			"inputs": [
+				{"name":"senders","type":"address[]"},
+				{"name":"rewards","type":"uint128[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "dispatchReferrerAddress",
 			"inputs": [
 				{"name":"sender","type":"address"},

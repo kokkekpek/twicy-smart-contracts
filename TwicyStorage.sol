@@ -91,6 +91,25 @@ contract TwicyStorage is ArrayUtil,
 
 
 
+    /************************
+     * EXTERNAL * MIGRATION *
+     ***********************/
+    function migrate(uint128 amountAvailableForPayout, uint32 payoutsCount) external onlyRoot accept {
+        _amountAvailableForPayout = amountAvailableForPayout;
+        _payoutsCount = payoutsCount;
+    }
+
+    function migrateDeposits(address[] senders, uint128[] rewards) external onlyRoot accept {
+        Deposit[] deposits = _deposits;
+        for (uint256 i = 0; i < senders.length; i++) {
+            Deposit deposit = Deposit(senders[i], rewards[i]);
+            deposits.push(deposit);
+        }
+        _deposits = deposits;
+    }
+
+
+
     /************
      * EXTERNAL *
      ************/

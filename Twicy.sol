@@ -2,6 +2,7 @@ pragma solidity >= 0.6.2;
 
 import 'TwicyStorage.sol';
 import 'interfaces/TwicyInterface.sol';
+import 'modifiers/MigrationModifier.sol';
 import 'modifiers/TransferValueModifier.sol';
 import 'utils/ArrayUtil.sol';
 import 'utils/HexadecimalNumberUtil.sol';
@@ -28,8 +29,11 @@ import 'utils/TwicyRewardUtil.sol';
  *     • 105 — Invalid referral id
  *     • 106 — Invalid storage address
  *     • 200 — Invalid transfer value
+ *     • 300 — Method can only be called before migration
+ *     • 301 — Method can only be called after migration
  */
 contract Twicy is TwicyInterface,
+                  MigrationModifier,
                   TransferValueModifier,
                   ArrayUtil,
                   HexadecimalNumberUtil,
@@ -190,16 +194,53 @@ contract Twicy is TwicyInterface,
 
 
 
+    /***********************************
+     * PUBLIC * ONLY OWNER * MIGRATION *
+     ***********************************/
+    function migrate(
+        uint128[] storageAmounts,
+        uint32    storageIdForPayout,
+        uint64    depositsCount,
+        uint256   total
+    ) public onlyOwner accept beforeMigration {
+        _storageAmounts = storageAmounts;
+        _storageIdForPayout = storageIdForPayout;
+        _depositsCount = depositsCount;
+        _total = total;
+    }
+
+    function migrateStorage(
+        address storageAddress,
+        uint128 amountAvailableForPayout,
+        uint32  payoutsCount
+    ) public onlyOwner accept beforeMigration {
+        TwicyStorage(storageAddress).migrate{value: 1e9}(amountAvailableForPayout, payoutsCount);
+    }
+
+    function migrateStorageDeposits(
+        address   storageAddress,
+        address[] senders,
+        uint128[] rewards
+    ) public onlyOwner accept beforeMigration {
+        TwicyStorage(storageAddress).migrateDeposits{value: 1e9}(senders, rewards);
+    }
+
+    function completeMigration() public onlyOwner beforeMigration accept {
+        _migrationCompleted = true;
+    }
+
+
+
     /********************
      * PUBLIC * DEPOSIT *
      ********************/
-    function depositWithReferralId(uint64 referralId) public validDeposit enoughStorages {
+    function depositWithReferralId(uint64 referralId) public validDeposit enoughStorages afterMigration {
         address sender = msg.sender;
         uint128 value = uint128(msg.value);
         _dispatchReferrerAddress(sender, value, referralId);
     }
 
-    function deposit() public validDeposit enoughStorages {
+    function deposit() public validDeposit enoughStorages afterMigration {
         address sender = msg.sender;
         uint128 value = uint128(msg.value);
         _depositWithoutReferralBonus(sender, value);
@@ -233,7 +274,7 @@ contract Twicy is TwicyInterface,
     /***********
      * RECEIVE *
      ***********/
-    receive() external validDeposit enoughStorages {
+    receive() external validDeposit enoughStorages afterMigration {
         address sender = msg.sender;
         uint128 value = uint128(msg.value);
         uint8[] message = _readMessage(msg.data);

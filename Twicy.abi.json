@@ -92,6 +92,44 @@
 			]
 		},
 		{
+			"name": "migrate",
+			"inputs": [
+				{"name":"storageAmounts","type":"uint128[]"},
+				{"name":"storageIdForPayout","type":"uint32"},
+				{"name":"depositsCount","type":"uint64"},
+				{"name":"total","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "migrateStorage",
+			"inputs": [
+				{"name":"storageAddress","type":"address"},
+				{"name":"amountAvailableForPayout","type":"uint128"},
+				{"name":"payoutsCount","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "migrateStorageDeposits",
+			"inputs": [
+				{"name":"storageAddress","type":"address"},
+				{"name":"senders","type":"address[]"},
+				{"name":"rewards","type":"uint128[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "completeMigration",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "depositWithReferralId",
 			"inputs": [
 				{"name":"referralId","type":"uint64"}
