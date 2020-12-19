@@ -10,22 +10,21 @@
 * [ton.live](https://ton.live/accounts/accountDetails?id=0%3A22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe922)
 * [net.ton.live](https://net.ton.live/accounts/accountDetails?id=0%3A22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe922)
 
-
 ## How to play
 ![How to play x2](_README/how-to-play-x2.png)
 * Send 10💎 to smart-contract
   * If you use [Surf](https://ton.surf/) on mobile use this link [ton://transfer/0:22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe922?amount=10000000000](ton://transfer/0:22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe922?amount=10000000000). If link not clickable then sorry. Github parser has not yet learned how to make links for the Free TON
-  * Minimum is 5💎. Maximum is 500💎
+  * More than 10💎 and less than 10💎 are not acceptable
 * Get an answer and wait your turn
 * Get 20💎
 
 ## How to get x2.2
-![How to play x2.2](_README/how-to-play-x2.2.png)
+![How to play +5%](_README/how-to-play-x2.1.png)
 * Send 10💎 to smart-contract
   * Get a referral ID from another player
   * Write referral ID in the comment field
 * Get an answer and wait your turn
-* Get 22💎
+* Get 21💎
 
 Own referral ID do not give you bonus multiplier
 
@@ -41,8 +40,8 @@ ton://transfer/0:22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe92
 
 ## Economics
 ![Diagramm](_README/diagramm.png)
-* **85%** - 8.5💎 from every 10💎 - payouts to participants
-* **10%** - 1💎 from every 10💎 - developers reward and fee for smart-contracts
+* **90%** - 9💎 from every 10💎 - payouts to participants
+* **5%** - 0.5💎 from every 10💎 - developers reward and fee for smart-contracts
 * **5%** - 0.5💎 from every 10💎 - referrer reward if user set referral ID. If referral ID doesn't set, then part pay outs to participants
  
 ## How it works
@@ -152,3 +151,6 @@ GIT_BRANCH: master
 
 ### Migration
 [Migration from v1.0.0 to 1.1.0](MIGRATION.md)
+
+## Telegram
+[@freeton_twicy](https://t.me/freeton_twicy)
