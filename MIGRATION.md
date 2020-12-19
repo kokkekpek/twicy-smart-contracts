@@ -5,9 +5,9 @@ Migration step by step in main net
 * from [0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222](https://net.ton.live/accounts/accountDetails?id=0%3A2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222) 
 * to [0:223192d1e0d65bf69b6427be5053eef6e61521a4926c762f2dbe1097e5432222](https://net.ton.live/accounts/accountDetails?id=0%3A223192d1e0d65bf69b6427be5053eef6e61521a4926c762f2dbe1097e5432222)
 
-## Transfer 2508.7 tokens from the old address to safe wallet
+## Transfer 2508 tokens from the old address to safe wallet
 ```sh
-tonos-cli call '0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222' sendTransaction '{"destination": "0:d6bfb70f82306591f7e7ad38e2cb08a0f58f3a93bf8044863c4ad70237e5f448", "value": 2508700000000}' --abi Twicy.abi.json --sign Twicy.keys.json
+tonos-cli call '0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222' sendTransaction '{"destination": "0:d6bfb70f82306591f7e7ad38e2cb08a0f58f3a93bf8044863c4ad70237e5f448", "value": 2508000000000}' --abi Twicy.abi.json --sign Twicy.keys.json
 ```
 
 ## Transfer 1.3 and 0.9 tokens from the old storages address to safe wallet
