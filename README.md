@@ -5,7 +5,7 @@
 
 ## Address
 ```sh
-0:2292cb83adc50e9e689e87a1d8dffb7753174999a8d07f5f155ec7bc1d022222
+0:22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe922
 ```
 * [ton.live](https://ton.live/accounts/accountDetails?id=0%3A22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe922)
 * [net.ton.live](https://net.ton.live/accounts/accountDetails?id=0%3A22ef8de60d44fd929479d41e7b6f52f25d8de1c9dd02f86f2d175d9ab4dbe922)
